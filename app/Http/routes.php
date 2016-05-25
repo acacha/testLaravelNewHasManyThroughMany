@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('user', 'UserController');
+
+Route::get('user/{id}/notifications', 'UserNotificationsController@showNotifications');
+Route::get('user/{id}/notifications2', 'UserNotificationsController@showNotifications2');
